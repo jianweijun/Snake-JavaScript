@@ -1,0 +1,11 @@
+Test Case ID,Test Scenario,Test Steps,Expected Result,Actual Result,Status
+1,Snake Initial Direction,"1. Load the game\n2. Observe initial snake movement",Snake moves RIGHT (default),,
+2,Change Direction (UP),"1. Press UP arrow key\n2. Observe snake movement",Snake changes direction to UP,,
+3,Change Direction (LEFT),"1. First press UP arrow key\n2. Then press LEFT arrow key",Snake changes direction to LEFT (ignore DOWN rule),,
+4,Change Direction (Invalid DOWN),"1. Initially moving RIGHT\n2. Press DOWN arrow key",Snake continues RIGHT (cannot reverse 180°),,
+5,Wall Collision,"1. Move snake to canvas edge\n2. Continue moving toward edge",Game ends (gameOver = true),,
+6,Self Collision,"1. Force snake head to overlap body\n2. Trigger collision check",Game ends (gameOver = true),,
+7,Food Consumption,"1. Move snake head to food position\n2. Check score and snake length",Score increases by 1, snake grows by 1 segment,,
+8,Food Spawn Location,"1. Fill all canvas except 1 tile\n2. Generate new food",Food spawns only in the empty tile,,
+9,Game Restart,"1. Trigger gameOver\n2. Call resetGame() function",Snake resets to initial state, score=0,,
+10,High Score Save,"1. Set score > highScore\n2. Trigger gameOver",highScore updates to match score,,
